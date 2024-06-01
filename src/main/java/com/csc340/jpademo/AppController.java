@@ -8,6 +8,6 @@ public class AppController {
 
     @GetMapping({"", "/", "/home", "/index"})
     public String home(){
-        return "redirect:/students/all";
+        return "redirect:/goals/all";
     }
 }

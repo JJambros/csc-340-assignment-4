@@ -3,6 +3,8 @@ package com.csc340.jpademo.TaskManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TaskService {
 
@@ -29,4 +31,5 @@ public class TaskService {
         taskRepository.save(task);
     }
 
+    public List<Task> getTasksByGoalId(int goalId) { return taskRepository.findByGoal_GoalId(goalId); }
 }
